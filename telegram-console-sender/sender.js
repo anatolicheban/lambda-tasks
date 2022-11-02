@@ -5,7 +5,7 @@ const program = new Command();
 
 
 const bot = new TelegramBot(token, { polling: false })
-
+bot.sendMessage(809217757, 'kek')
 program
   .name('sender')
   .description('CLI to send meessages and photos from telegram bot')
@@ -22,7 +22,7 @@ program.command('message')
 
 program.command('photo')
   .description('Sends a photo to users')
-  .argument('<string>')
+  .argument('<path>')
   .action((msg) => {
     users.forEach(user => {
       bot.sendPhoto(user.id, msg)

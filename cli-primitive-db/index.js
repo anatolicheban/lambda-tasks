@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import { readFileSync, writeFileSync } from 'fs'
 
-const startJson = readFileSync('db.json', 'utf-8')
+const startJson = readFileSync('db.txt', 'utf-8')
 const database = JSON.parse(startJson)
 console.log(database);
 
@@ -56,7 +56,7 @@ function askMoreInfo(name) {
       //дополнительно превращаем строку инпута в число
       result.age = +answers.age
       database.push(result)
-      writeFileSync('db.json', JSON.stringify(database))
+      writeFileSync('db.txt', JSON.stringify(database))
       console.log(database);
       //Новый цикл добавления пользователя
       askUsername()

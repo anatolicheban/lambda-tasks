@@ -3,7 +3,7 @@ import { writeFileSync, readFileSync } from "fs";
 import lodash from 'lodash'
 
 //Получаем простенькую бд
-export const users = JSON.parse(readFileSync('users.json', 'utf-8'))
+export const users = JSON.parse(readFileSync('users.txt', 'utf-8'))
 
 // Подключаемся к боту
 export const token = '5684482539:AAG0L1waRyb3URkWgyc051MLRVdPcPigV3A'
@@ -20,8 +20,7 @@ bot.onText(/\/start/, (msg) => {
   if (!isInDatabase) {
     users.push(user)
     //Перезаписываем бд
-    writeFileSync('users.json', JSON.stringify(users))
+    writeFileSync('users.txt', JSON.stringify(users))
     bot.sendMessage(msg.chat.id, 'Ok, wait for the messages');
   }
-
 });

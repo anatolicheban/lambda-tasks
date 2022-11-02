@@ -10,7 +10,7 @@ const token = '5626264132:AAFV4H9Z0RPrfBW_YyMH_RmG8okh62WRAOU'
 
 const bot = new TelegramBot(token, { polling: true })
 
-bot.onText(/^[a-zA-Z0-9_.-]*$/, async function (info) {
+bot.on('message', async function (info) {
   if (info.text === 'photo') {
     bot.sendMessage(info.from.id, `Sending photo...`)
     const url = 'https://picsum.photos/200/300'
