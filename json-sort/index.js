@@ -31,11 +31,15 @@ for (let i = 0; i < urls.length; i++) {
     })
 }
 
-
+console.log(`\nTotal isDone: ${isDoneTotal}\nTotal isNotDone: ${isNotDoneTotal}`);
 
 
 function searchIsDone(item, url) {
   for (let key in item) {
+    //Если массив
+    if (Array.isArray(item[key])) {
+      searchInArr(item[key], url)
+    }
     //Если обьект
     if (typeof item[key] === 'object' && !Array.isArray(item[key])) {
       searchIsDone(item[key], url)
@@ -52,5 +56,16 @@ function searchIsDone(item, url) {
   }
 }
 
+function searchInArr(arr, url) {
+  for (let i = 0; i < arr.length; i++) {
+    //Array
+    if (Array.isArray(arr[i])) {
+      searchInArr(arr[i], url)
+    }
+    //Object
+    if (typeof arr[i] === 'object' && !Array.isArray(arr[i])) {
+      searchIsDone(arr[i], url)
+    }
+  }
+}
 
-console.log(`\nTotal isDone: ${isDoneTotal}\nTotal isNotDone: ${isNotDoneTotal}`);
