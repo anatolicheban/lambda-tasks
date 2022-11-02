@@ -1,0 +1,21 @@
+{
+  "firstName": "Isabelle",
+  "lastName": "Bradbury",
+  "hobbies": ["yoga", "sleeping"],
+  "phone": "437-472-5970",
+  "work": "ForeTrust",
+  "weight": "58 kg",
+  "location": {
+    "ipAddress": "15.164.84.199",
+    "coordinates": { "x": 23.48, "y": -9.61 },
+    "country": "Panama",
+    "zipCode": "19580",
+    "city": "Wellington",
+    "countryCode": "PA"
+  },
+  "id": "id#cb9d8df0-ea47-4c59-b4ce-65907d3942b0",
+  "isDone": true,
+  "age": "43",
+  "email": "isabelle.bradbury@unilogic.co",
+  "height": "205"
+}
