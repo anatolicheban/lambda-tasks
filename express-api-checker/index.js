@@ -1,5 +1,5 @@
 const express = require('express')
-const ipInt = require('ip-to-int')
+const ipToInt = require('./ip-to-int')
 const path = require('path')
 const fs = require('fs')
 const { parse } = require('csv-parse')
@@ -24,9 +24,9 @@ fs.createReadStream(path.join(__dirname, 'IP_ADRESSES.CSV'))
 app.get('/', function (req, res) {
   let ip = req.ip
   console.log(ip);
-  const decimalIp = ipInt('89.31.183.255').toInt();
-  console.log(decimalIp.toString());
-  let foundLocation = csvData.find(el => el.includes(decimalIp.toString()))
+  const decimalIp = ipToInt('89.31.200.0').toString()
+  console.log(decimalIp);
+  let foundLocation = csvData.find(el => el.includes(decimalIp))
   if (!foundLocation) return res.send('Cannot get your location')
   res.status(200).send(`Your location is ${foundLocation[3]}!`)
 
