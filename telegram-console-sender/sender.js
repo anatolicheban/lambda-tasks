@@ -5,7 +5,8 @@ const program = new Command();
 
 
 const bot = new TelegramBot(token, { polling: false })
-bot.sendMessage(809217757, 'kek')
+
+
 program
   .name('sender')
   .description('CLI to send meessages and photos from telegram bot')

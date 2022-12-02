@@ -2,7 +2,7 @@ export const locations = [
   [
     {
       text: 'Kyiv',
-      callback_data: 'Tyiv'
+      callback_data: 'Kyiv'
     }
   ],
   [
