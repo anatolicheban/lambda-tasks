@@ -13,21 +13,31 @@ let isNotDoneTotal = 0
 //Kостыльная штуковина
 let requests = {}
 urls.forEach((val, index) => {
-  requests[`${index + 1}`] = 0
+  requests[`request${index + 1}`] = 0
 })
 
 
 
 for (let i = 0; i < urls.length; i++) {
-  const retryReq = axios.interceptors.request.use(data => data, async err => {
-    console.log('Retry', requests[i + 1]);
-    if (requests[i + 1] < 3) {
-      await instance.get(urls[i])
-      requests[i + 1]++
-    }
-  })
-  await instance.get(urls[i])
+  const countRequests = 0
+  axios.interceptors.request.use(data => data, err => {
 
+  })
+
+  await instance.get(urls[i])
+    .then(res => {
+      requests[`request${i + 1}`]++
+      console.log(`Url ${i + 1} - downloaded!`);
+      searchIsDone(res.data, urls[i])
+    })
+    //Перезапросы
+    .catch(err => {
+      requests[`request${i + 1}`]++
+      console.log(`Error! Sending request for Url ${' ' + (i + 1)} again...`);
+      if (requests[`request${i + 1}`] < 3) {
+        i--
+      }
+    })
 }
 
 console.log(`\nTotal isDone: ${isDoneTotal}\nTotal isNotDone: ${isNotDoneTotal}`);

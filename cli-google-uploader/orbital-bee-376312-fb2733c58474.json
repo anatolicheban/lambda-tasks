@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "orbital-bee-376312",
+  "private_key_id": "fb2733c58474a05fa457f65027f78e3e2580d142",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDKncbjxgWLAuYt\nExygrx8mrTPOv09Fzf6FYszXKQJ/WdXpF3vn3FKIyzSiKrfVmVfEcHQcNytpmnJi\nbFmeDe75pDv2K9ocVZuR6xQ9QL41E1I1DJIoVnvcXKFAutBoipetfIKfhRafJ0ZF\nt+3dzmCJplUHZzIwWC1ljC5CIoHuBhwD110vkze06Nx6K6fEKSiTUIg/1VpaBbvw\nrAYdOG1w2RVXJVuSb9JupLFJZgtMA5qX1EO/pRQm0/vKIP8eQRuNRnw2yU1xepca\nCWzcSE8c/4N8YX2srYb1XPtl6JKXYZHC2WWKRh4Itn3HNEk7dEMKeEbLDpX6023S\nt4wDPsAzAgMBAAECggEAIO0G1xjk6bQs54JFkq8ipsxasOxR24wgIljt5MEbUMqu\nglR4pDMfjm9HPFsoyKNEqf2EQNmOSnj4wZnN7mthPFw+CkESDqyyvUGwZkvRHRro\nrwo97iQvuJ2s7rHtEDAFegHT0Ex2YqKlPssm8naJJZVMGAnjFAwgRHJFSiYFa0J0\nsmvsEJ7nLRx4T+QKdh2J5KPkXF94pUie87AGuMJwJTLQ9OLie5lNzkH/GYDAmCjE\nh5FcBUvoSJK1sJiX548/9UbZ824zEJdcnfZ9EKNyr2qCVYSwVsPJt+KXl6fUu4d4\nfGvoc/mTuxRAg3S016MI2sXbwsAverXJH+LEz29skQKBgQD0Y4qMjFM5QgbVtAxx\no3S6a4Mtqob3+6dPoaZPvGg3brodfsGdcNVK9Rj4/qrtM0OpGeWn1el/wjr1gbRr\nMME9Mc73635jBXv0EFOqBA9U4z6o25mwBYaoTm4L54rMlAISeN0ZfBWOxSKCIDCN\nIzBmsVP74cURX6iw9I5nYu1zfwKBgQDUPiny5vbstW1o+5Kt7VxO808uQGjZYmy+\nad9vTeRVK3FE3mcfhROAITyOPPwpLhxHcTHgQpPIl0sKVoDaf5Jv6oTaJkVsWZJX\nuG+9MVds3S4WMUUK3Z4uOWknr/5iFJQ8OhAt3fg5AF6U06WlAq6r/UDJ0KA9bvSb\n8brXjpJ9TQKBgDhP23PpPZ/669JAK4Hf1RzDezWBjpoDfZjmuYiz9BuZwv7a30gk\n4LDl6vwsyjvfzR5g3j8fFi+fFLDPU0BDurMcEAGmXLf6YoZpYK3TQ6ket6h2+WHK\n1C1h7Q+HKb9b92JEQUYHBnygRgRP4IAU9KklASIP8rW/IgKsR0fhTq+HAoGBAKPk\nSOJP5ZcN1im+MhrqcmBo09jkVdKfhVdYS/gYDtyRykqi7sDRMyi7AZbYkuN9vsqQ\nJzKEVrgL1B9sgt22qy6Oyv3llbBATpg8TNSseFURSphKfYURcydAn+nMpkO4nmsP\nbxTsFdR2a5LDCGMuehFHY7MzzbkCqBKPjHcNmiL1AoGAYawlyJacdauns4s+8HVi\nfIc6nFiwiOvWIKlRbpBjjjCl2C27VTGSRb/I2uzPChOCU/j6M3Mj8XXPK/iJtfkd\nyA5PXOAGT3+bbncEljY8dw0nxh6jQd32x7l4zruLzTDbHCvja942e4eXG3Fr13v/\najL54Y4rhoKEBLg20lqIyWI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "main-account@orbital-bee-376312.iam.gserviceaccount.com",
+  "client_id": "103027229183304620910",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/main-account%40orbital-bee-376312.iam.gserviceaccount.com"
+}

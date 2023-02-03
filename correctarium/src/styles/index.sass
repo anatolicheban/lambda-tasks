@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic)
+html
+  font-family: 'Open Sans', sans-serif
+.container
+  max-width: 1440px
+  margin: 0 auto
+  padding: 0 1rem
+
+.title
+  font-weight: 500
+  margin-top: 4rem
+  @media (max-width: 850px)
+    text-align: center
+
+.order
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  @media (max-width: 850px)
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 1fr
+  &__form
+    margin-top: 1rem
+  &__text
+    position: relative
+    textarea
+      resize: none
+      width: calc(100% - 1rem)
+      border-radius: .5rem
+      outline: none
+      padding: 0.5rem
+      height: 15rem
+      font-size: 1rem
+
+  &__text-placeholder
+    position: absolute
+    top: 0.5rem
+    left: .5rem
+    color: #333
+    font-weight: 300
+    cursor: text
+    button
+      background-color: transparent
+      border: none
+      font-size: 1rem
+      padding: 0
+      margin-left: 0.25rem
+      font-weight: 500
+      color: blue
+      cursor: pointer
+  &__lang
+    position: relative
+    width: 10rem
+    @media (max-width: 850px)
+      margin: 0 auto
+    button
+      width: 10rem
+      padding: 1rem 0
+      border-radius: .5rem
+      cursor: pointer
+      background-color: transparent
+      border: none
+      background-color: rgba(#333, .2)
+    ul
+      position: absolute
+      top: calc(100% + .5rem)
+      left: 0
+      border: 1px solid rgba(#000, .3)
+      display: inline-block
+      list-style: none
+      margin: 0
+      padding-inline-start: 0
+      border-radius: .5rem
+      overflow: hidden
+      button
+        border-radius: 0
+        &:hover
+          background-color: rgba(#333, .4)
+    li
+      width: 100%
+  &__result
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+  &__result-box
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding: 1rem
+    background-color: rgba(blue, .3)
+    border-radius: .5rem

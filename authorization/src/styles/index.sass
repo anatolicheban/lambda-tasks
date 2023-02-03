@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic)
+
+*
+  box-sizing: border-box
+
+html
+  font-family: 'Poppins' ,serif
+
+.layout
+  width: 100vw
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+.login, .signup
+  &__title
+    margin: 0
+  &__form
+    padding: 2rem
+    border-radius: .5rem
+    background-color: #8EA7E9
+    display: flex
+    align-items: center
+    flex-direction: column
+    max-width: 30rem
+    width: 100%
+    label
+      display: flex
+      flex-direction: column
+      margin-top: 1rem
+      span
+        margin-bottom: 0.25rem
+      input
+        padding: 0.5rem
+        width: 100%
+        outline: none
+        border: 1px solid #fff
+        &:focus
+          border: 1px solid #333
+    button
+      margin-top: 1rem
+      background-color: #FFF2F2
+      border: none
+      border-radius: .25rem
+      padding: .5rem 2rem
+      font-weight: 600
+      cursor: pointer

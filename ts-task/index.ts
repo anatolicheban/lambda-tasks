@@ -116,7 +116,15 @@ interface Array<T> {
    * @returns Number - total count
    */
   count(this: object[], keySelector: (item: T) => number): number;
-  groupBy<S extends object>(this: object[], keySelector: (item: T) => keyof T | string): S;
+  /**
+   * Groups an array with given key selector
+   * @param this Objects array
+   * @param keySelector Key Selector Func
+   */
+  groupBy<T extends object>(
+    this: T[],
+    keySelector: (item: T) => keyof T | string
+  ): { [key in keyof T | string]?: T[] };
 }
 
 //Defining method multiply
@@ -130,7 +138,7 @@ Array.prototype.multiply = function (this: number[], factor?: number): number[] 
 
 //Multiply test
 const numsArr = [1, 3, 4, 5];
-// console.log(numsArr.multiply());
+console.log(numsArr.multiply());
 
 //All
 Array.prototype.all = function <T>(this: T[], cb: (item: T) => boolean): boolean {
@@ -372,19 +380,27 @@ Array.prototype.count = function (this: object[], keySel: (item: object) => numb
 // console.log([{ popul: 300 }, { popul: 450 }].count((item) => item.popul));
 
 //GroupBy
-Array.prototype.groupBy = function <T, S extends object>(
-  this: object[],
+Array.prototype.groupBy = function <T extends object>(
+  this: T[],
   keySelector: (item: T) => keyof T | string
-): S {
-  let result: S = {} as S;
+): { [key in keyof T | string]: T[] } {
+  const result = {} as { [key in keyof T | string]: T[] };
+
   for (let elem of this) {
+    let keySel = keySelector(elem);
+    if (!result[keySel]) {
+      result[keySel] = [];
+      result[keySel][0] = elem;
+      continue;
+    }
+    result[keySel][result[keySel].length] = elem;
   }
   return result;
 };
+
 const data: { emoji: string; sad: boolean }[] = [
   { emoji: "😀", sad: false },
   { emoji: "🥲", sad: false },
+  { emoji: "lol", sad: true },
 ];
-console.log(
-  data.groupBy<{ sad: { emoji: string; sad: boolean }[] }>((entry) => (entry.sad ? "sad" : "happy"))
-);
+console.log(data.groupBy((entry) => (entry.sad ? "sad" : "happy")));
